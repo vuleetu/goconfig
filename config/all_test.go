@@ -22,7 +22,7 @@ const tmp = "/tmp/__config_test.go__garbage"
 func testGet(t *testing.T, c *Config, section string, option string,
 expected interface{}) {
 	ok := false
-	switch _ := expected.(type) {
+	switch expected.(type) {
 	case string:
 		v, _ := c.String(section, option)
 		if v == expected.(string) {
@@ -190,7 +190,7 @@ func TestInMemory(t *testing.T) {
 
 // Creates a 'tough' configuration file and test (read) parsing.
 func TestReadFile(t *testing.T) {
-	file, err := os.Open(tmp, os.O_WRONLY|os.O_CREAT|os.O_TRUNC, 0644)
+	file, err := os.Create(tmp)
 	if err != nil {
 		t.Fatalf("Test cannot run because cannot write temporary file: " + tmp)
 	}

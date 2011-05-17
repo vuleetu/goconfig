@@ -19,7 +19,7 @@ import (
 // Base to read a file and get the configuration representation.
 // That representation can be queried with GetString, etc.
 func _read(fname string, c *Config) (*Config, os.Error) {
-	file, err := os.Open(fname, os.O_RDONLY, 0)
+	file, err := os.Open(fname)
 	if err != nil {
 		return nil, err
 	}
@@ -37,8 +37,7 @@ func _read(fname string, c *Config) (*Config, os.Error) {
 
 // ReadDefault reads a configuration file and returns its representation.
 // All arguments, except `fname`, are related to `New()`
-func Read(fname string, comment, separator string, preSpace, postSpace bool) (
-*Config, os.Error) {
+func Read(fname string, comment, separator string, preSpace, postSpace bool) (*Config, os.Error) {
 	return _read(fname, New(comment, separator, preSpace, postSpace))
 }
 
@@ -81,7 +80,7 @@ func (self *Config) read(buf *bufio.Reader) (err os.Error) {
 
 		// No new section and no section defined so
 		//case section == "":
-			//return os.NewError("no section defined")
+		//return os.NewError("no section defined")
 
 		// Other alternatives
 		default:
