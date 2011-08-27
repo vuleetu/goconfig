@@ -266,4 +266,3 @@ func TestWriteReadFile(t *testing.T) {
 
 	defer os.Remove(tmp)
 }
-

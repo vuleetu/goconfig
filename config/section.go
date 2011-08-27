@@ -82,4 +82,3 @@ func (self *Config) Sections() (sections []string) {
 
 	return sections
 }
-

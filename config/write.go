@@ -84,4 +84,3 @@ func (self *Config) write(buf *bufio.Writer, header string) (err os.Error) {
 
 	return nil
 }
-

@@ -112,4 +112,3 @@ func (self *Config) String(section string, option string) (value string, err os.
 
 	return value, nil
 }
-

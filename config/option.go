@@ -84,4 +84,3 @@ func (self *Config) Options(section string) (options []string, err os.Error) {
 
 	return options, nil
 }
-

@@ -106,4 +106,3 @@ func (self *Config) read(buf *bufio.Reader) (err os.Error) {
 	}
 	return nil
 }
-

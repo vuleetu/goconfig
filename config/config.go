@@ -58,7 +58,7 @@ type Config struct {
 	idSection     map[string]int // Section : position
 
 	// The last option identifier used for each section.
-	lastIdOption  map[string]int // Section : last identifier
+	lastIdOption map[string]int // Section : last identifier
 
 	// Section -> option : value
 	data map[string]map[string]*tValue
@@ -130,4 +130,3 @@ func stripComments(l string) string {
 	}
 	return l
 }
-

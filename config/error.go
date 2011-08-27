@@ -22,4 +22,3 @@ type optionError string
 func (self optionError) String() string {
 	return "option not found: " + string(self)
 }
-
