@@ -9,13 +9,11 @@
 
 package config
 
-
 type sectionError string
 
 func (self sectionError) String() string {
 	return "section not found: " + string(self)
 }
-
 
 type optionError string
 

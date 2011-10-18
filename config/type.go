@@ -15,7 +15,6 @@ import (
 	"strings"
 )
 
-
 // Bool has the same behaviour as String but converts the response to bool.
 // See "boolString" for string values converted to bool.
 func (self *Config) Bool(section string, option string) (value bool, err os.Error) {

@@ -14,7 +14,6 @@ import (
 	"strings"
 )
 
-
 const (
 	// Default section name.
 	_DEFAULT_SECTION = "DEFAULT"
@@ -46,7 +45,6 @@ var (
 
 	varRegExp = regexp.MustCompile(`%\(([a-zA-Z0-9_.\-]+)\)s`) // %(variable)s
 )
-
 
 // Config is the representation of configuration settings.
 type Config struct {
@@ -116,7 +114,6 @@ func New(comment, separator string, preSpace, postSpace bool) *Config {
 func NewDefault() *Config {
 	return New(DEFAULT_COMMENT, DEFAULT_SEPARATOR, false, true)
 }
-
 
 // === Utility
 // ===

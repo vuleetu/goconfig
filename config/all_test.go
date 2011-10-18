@@ -18,9 +18,8 @@ import (
 
 const tmp = "/tmp/__config_test.go__garbage"
 
-
 func testGet(t *testing.T, c *Config, section string, option string,
-expected interface{}) {
+	expected interface{}) {
 	ok := false
 	switch expected.(type) {
 	case string:

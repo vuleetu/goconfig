@@ -16,7 +16,6 @@ import (
 	"strings"
 )
 
-
 // WriteFile saves the configuration representation to a file.
 // The desired file permissions must be passed as in os.Open. The header is a
 // string that is saved as a comment in the first line of the file.
