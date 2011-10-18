@@ -13,7 +13,6 @@ import (
 	"os"
 )
 
-
 // AddOption adds a new option and value to the configuration.
 //
 // If the section is nil then uses the section by default; if it does not exist,
@@ -45,7 +44,7 @@ func (self *Config) RemoveOption(section string, option string) bool {
 	}
 
 	_, ok := self.data[section][option]
-	self.data[section][option] = nil, false
+	delete(self.data[section], option)
 
 	return ok
 }
