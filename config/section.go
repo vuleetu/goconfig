@@ -51,8 +51,8 @@ func (self *Config) RemoveSection(section string) bool {
 	}
 	self.data[section] = nil, false
 
-	self.lastIdOption[section] = 0, false
-	self.idSection[section] = 0, false
+	delete(self.lastIdOption, section)
+	delete(self.idSection, section)
 
 	return true
 }
