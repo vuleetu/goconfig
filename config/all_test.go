@@ -182,7 +182,7 @@ func TestInMemory(t *testing.T) {
 	_, err = c.String(_DEFAULT_SECTION, "opt1")
 	if err == nil {
 		t.Errorf("String failure: no error for cycle")
-	} else if strings.Index(err.String(), "cycle") < 0 {
+	} else if strings.Index(err.Error(), "cycle") < 0 {
 		t.Errorf("String failure: incorrect error for cycle")
 	}
 }
@@ -213,7 +213,7 @@ func TestReadFile(t *testing.T) {
 
 	c, err := ReadDefault(tmp)
 	if err != nil {
-		t.Fatalf("ReadDefault failure: " + err.String())
+		t.Fatalf("ReadDefault failure: " + err.Error())
 	}
 
 	// check number of sections
@@ -255,7 +255,7 @@ func TestWriteReadFile(t *testing.T) {
 	// read back file and test
 	cr, err := ReadDefault(tmp)
 	if err != nil {
-		t.Fatalf("ReadDefault failure: " + err.String())
+		t.Fatalf("ReadDefault failure: " + err.Error())
 	}
 
 	testGet(t, cr, "First-Section", "option1", "value option1")

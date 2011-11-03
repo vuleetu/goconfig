@@ -9,9 +9,7 @@
 
 package config
 
-import (
-	"os"
-)
+import "errors"
 
 // AddOption adds a new option and value to the configuration.
 //
@@ -65,9 +63,9 @@ func (self *Config) HasOption(section string, option string) bool {
 // Options returns the list of options available in the given section.
 // It returns an error if the section does not exist and an empty list if the
 // section is empty. Options within the default section are also included.
-func (self *Config) Options(section string) (options []string, err os.Error) {
+func (self *Config) Options(section string) (options []string, err error) {
 	if _, ok := self.data[section]; !ok {
-		return nil, os.NewError(sectionError(section).String())
+		return nil, errors.New(sectionError(section).Error())
 	}
 
 	options = make([]string, len(self.data[_DEFAULT_SECTION])+len(self.data[section]))
