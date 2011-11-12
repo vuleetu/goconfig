@@ -94,7 +94,7 @@ Note that sections, options and values are all case-sensitive.
 ***Copyright 2009  The "goconfig" Authors***  
 See file AUTHORS and CONTRIBUTORS.
 
-Licensed under **BSD-2 Clause license**.  
+Licensed under **BSD 2-Clause License**.  
 See file LICENSE.
 
 
