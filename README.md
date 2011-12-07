@@ -89,7 +89,7 @@ This results in the file:
 Note that sections, options and values are all case-sensitive.
 
 
-## Licensing
+## Copyright and licensing
 
 ***Copyright 2009  The "goconfig" Authors***  
 See file AUTHORS and CONTRIBUTORS.
