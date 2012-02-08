@@ -29,7 +29,7 @@ the Python Standard Library.
 
 ## Installation
 
-	go install github.com/kless/goconfig/config
+	go get github.com/kless/goconfig/config
 
 To run the tests:
 
