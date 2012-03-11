@@ -196,7 +196,7 @@ func TestInMemory(t *testing.T) {
 func TestReadFile(t *testing.T) {
 	file, err := os.Create(tmp)
 	if err != nil {
-		t.Fatalf("Test cannot run because cannot write temporary file: " + tmp)
+		t.Fatal("Test cannot run because cannot write temporary file: " + tmp)
 	}
 
 	buf := bufio.NewWriter(file)
@@ -218,7 +218,7 @@ func TestReadFile(t *testing.T) {
 
 	c, err := ReadDefault(tmp)
 	if err != nil {
-		t.Fatalf("ReadDefault failure: " + err.Error())
+		t.Fatalf("ReadDefault failure: %s", err)
 	}
 
 	// check number of sections
@@ -260,7 +260,7 @@ func TestWriteReadFile(t *testing.T) {
 	// read back file and test
 	cr, err := ReadDefault(tmp)
 	if err != nil {
-		t.Fatalf("ReadDefault failure: " + err.Error())
+		t.Fatalf("ReadDefault failure: %s", err)
 	}
 
 	testGet(t, cr, "First-Section", "option1", "value option1")
